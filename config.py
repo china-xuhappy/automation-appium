@@ -1,0 +1,31 @@
+DEBUG = True
+import os
+
+USERID = 0
+
+# session
+SECRET_KEY = os.urandom(24)
+
+# 数据库 初始化提交
+HOSTNAME = None
+PORT = '3306'
+DATABASE = 'alter'
+USERNAME = None
+PASSWORD = None
+
+SQLALCHEMY_POOL_RECYCLE = 20
+SQLALCHEMY_POOL_SIZE = 100
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+DEBUG = True
+# SQLALCHEMY_ECHO = True
+
+DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
+SQLALCHEMY_DATABASE_URI = DB_URI
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+# user_id
+
+MONGO_DBNAME = 'alter'
+MONGO_URI = None  # mongo连接 初始化提交
+URL_PATH = "E:/"
